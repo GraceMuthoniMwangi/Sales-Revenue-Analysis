@@ -6,39 +6,39 @@
 
 - Some of the entries were not linked to any salespeople.
 
-a) Looked through the data to establish a pattern; if there was a specific salesperson based on city and country
+  a) Looked through the data to establish a pattern; if there was a specific salesperson based on city and country
 
-b) No relationship/pattern was determined, no salespeople had a specific region assigned to them. These blank cells were filled with "Unattributed" as the salespeople
+  b) No relationship/pattern was determined, no salespeople had a specific region assigned to them. These blank cells were filled with "Unattributed" as the salespeople
 
 - Some of the entries were not linked to any sales channels
 
-a) Looked through the data by salesperson and the city to establish if these were repeat/unique customers based on the customer segment
+  a) Looked through the data by salesperson and the city to establish if these were repeat/unique customers based on the customer segment
 
-b) Blanks were filled as "Unattributed"
+  b) Blanks were filled as "Unattributed"
 
 - Some of the orders had the unit prices as negative values
 
-1) Unit Price Values: Created a new column Q and used this formula: =IF(\$P2<0,NA(),\$P2)
-
-a) If the unit price is less than 0 (Negative), then the formula returns an "N/A" error but if not, it retains the original value
-
-2) Standardized the % discounts using this formula: =IF(R2>0.3,0.3,R2)
-
-a) If the discount value is greater than 30% (0.3), it standardizes the percentage to be "0.3/30%" but if its anything less, it returns the original percentage
+  1) Unit Price Values: Created a new column Q and used this formula: =IF(\$P2<0,NA(),\$P2)
+  
+    a) If the unit price is less than 0 (Negative), then the formula returns an "N/A" error but if not, it retains the original value
+  
+  2) Standardized the % discounts using this formula: =IF(R2>0.3,0.3,R2)
+  
+    a) If the discount value is greater than 30% (0.3), it standardizes the percentage to be "0.3/30%" but if its anything less, it returns the original percentage
 
 - Some orders had the required date earlier than the date when the order was placed
 
-a) Used the datedif formula on this column =DATEDIF(B2,C2,"D")
+  a) Used the datedif formula on this column =DATEDIF(B2,C2,"D")
+  
+    i. Column B contains the Order date
+    
+    ii. Column C contains the Required date
 
-i. Column B contains the Order date
+  b) 34 values returned a "Num" error indicating that the required date captured was earlier than the order date
+  
+  c) To fix the "Num" Error, I added the formula =IFERROR(DATEDIF(B3,C3,"D"),"-")
 
-ii. Column C contains the Required date
-
-b) 34 values returned a "Num" error indicating that the required date captured was earlier than the order date
-
-c) To fix the "Num" Error, I added the formula =IFERROR(DATEDIF(B3,C3,"D"),"-")
-
-This helped clear the error without changing the Required Date column therefore maintaining the integrity of the data
+    This helped clear the error without changing the Required Date column therefore maintaining the integrity of the data
 
 - The data was all in general format. I attributed all columns accordingly based on the data these columns contained
 
