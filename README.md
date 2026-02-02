@@ -1,3 +1,4 @@
+<img width="457" height="21" alt="image" src="https://github.com/user-attachments/assets/22c9c336-4e53-4cf8-ba06-d57346ea83d3" />**Sales Revenue Analysis - "Excel Assignment and brief.xlsx file**
 **Data issues found & cleaning rules:**
 
 - 1 duplicate value on the OrderID column
@@ -136,3 +137,35 @@ This helped clear the error without changing the Required Date column therefore 
 - The region with the highest outliers in order is Americas, Asia, Africa and then Europe
 - I. Johnson has a total of 11 orders that had discounts greater than 20%
 - The highest discount, more than 50%, was issued by M. Rossi in the Africa region
+
+
+**Jumia dataset file**
+**Data issues found & cleaning rules:**
+
+- 6 duplicate values were found and removed from the working data
+
+- Formatting was done to match the contents of each column
+
+**Assumptions made:**
+
+- That the 1st percentile of the discounted price helped classify the low discounted prices, and the 3rd percentile was used to establish the high discounted prices. Everything else was assumed to fall in the medium discounted price.
+
+- In the rating category, the assumption made was that anything  below 3 is a poor rating, anything greater than or equal to 4.5 is an excellent rating, and everything between these 2 categories is an average rating
+
+- That each rating is attributed to one user, but one user could give multiple ratings
+
+**Findings:**
+
+- High discounts attracted a high number of reviews however, the first 3 products with the highest discounts had 0 reviews. 
+- 52 products were not rated at all by the buyers
+- The highest review count was 258 reviews on the 40-50% discount band
+- The product that has the highest number of reviews is the 120W Cordless Vacuum Cleaners Handheld Electric Vacuum Cleaner at 69 reviews but it has quite a low rating of 2.8
+- The top products with a 5-star rating are as below. However, this could be bound to change with more ratings given these products have between 1-3 reviews per band
+• Classic Black Cat Cotton Hemp Pillow Case For Home Car
+• LASA Aluminum Folding Truck Hand Cart - 68kg Max
+• Konka Healty Electric Kettle, 24-hour Heat Preservation,1.5L,800W, White
+• Anti-Skid Absorbent Insulation Coaster  For Home Office
+• Peacock  Throw Pillow Cushion Case For Home Car
+• Bedroom Simple Floor Hanging Clothes Rack Single Pole Hat Rack - White
+• DIY File Folder, Office Drawer File Holder, Pen Holder, Desktop Storage Rack
+
